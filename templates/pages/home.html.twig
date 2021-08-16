@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+{% endblock %}
+
+{% block title %} DzUnity - Acceuil {% endblock %}
+{% block body %}
+
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-12 col-md-10"  style=" margin-top: 20px; text-align: center; ">
+                <a href="{{ path('home') }}">
+                    <img src="{{ asset('logo4.png','images') }}" width="120px" height="120px" />
+                </a>
+            </div>
+
+            <div class="row " >
+
+                <div class="col-lg-6 col-md-8" data-aos="fade-left" style=" margin-top: 30px; ">
+                    <h1 style=" margin-top:-10px; font-family: 'spartan'; line-height: 50px; font-size: 2.8em; letter-spacing: -3px; text-align: center;">Faire un don <br /> prés de chez<br /> vous ?</h1>
+                    <div style=" margin-top:25px; font-family: 'spartan'; font-size: 1em; text-align: center; color: gray; line-height: 21px;">Notre plateforme recense pour vous plus d’une centaine d’adresses fiables et vérifiés par nos soins de points de collecte et vous indique en temps réel les besoins de ces derniers. </div>
+
+                    <div style="text-align: center; margin-top: 30px ">
+                        <button type="button" class="btn btn-danger  btn-lg btn-block"><a href="{{ path('users.list') }}" style="text-decoration: none; color: inherit; font-size: 1.3em; font-family: 'spartan';">   Notre répertoire   <i class="bi bi-search"></i>
+                            </a>
+                        </button>
+                    </div>
+
+                <div style="text-align: center; margin-top: 50px;">
+
+                        <a href="mailto:contact@dzunity.com" target="_blank">
+                            <i class="bi bi-envelope-fill" style="font-size: 2.5em; margin-left: 5px; margin-right: 5px; color: rgb(0, 0, 0);"></i></a>
+
+                        <a href="https://www.facebook.com/DZunityTeam" target="_blank">
+                            <i class="bi bi-facebook" style="font-size: 2.5em; margin-left: 5px; margin-right: 5px; color: rgb(0, 0, 0);"></i></a>
+
+
+                        <a href="https://twitter.com/DZunityTeam" target="_blank">
+                            <i class="bi bi-twitter" style="font-size: 2.5em; margin-left: 5px; margin-right: 5px; color: black;"></i></a>
+
+
+                        <a href="https://www.instagram.com/dzunity.team/?hl=fr" target="_blank">
+                            <i class="bi bi-instagram" style="font-size: 2.5em; margin-left: 5px; margin-right: 5px; color: rgb(0, 0, 0);"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-4">
+                    <div class="card position-absolute top-20 end-0" style="width: 50rem;padding-left: 10rem ;background: rgba(0,0,0,0); border: none">
+                        <img src="{{ asset('vecteez.png','images') }}" alt="photo" class="card-img-top">
+
+                    </div>
+                </div>
+            </div>
+
+
+{% endblock %}

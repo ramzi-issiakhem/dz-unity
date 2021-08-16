@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} DzUnity - Liste des Points De Collecte {% endblock %}
+{% block body %}
+    <!-- Le Filtre !-->
+
+    {{ form_start(search_form) }}
+    <button class="btn btn-primary"> Filtrer </button>
+    {{ form_end(search_form) }}
+    <h3 >Liste des Assoc</h3>
+    <div class="container">
+
+
+    {% for user in users %}
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-title">
+                        {{ user.name }}
+                    </div>
+                    <div class="card-body">
+                        <p> Type : {{ user.type }}</p>
+                        <p> Wilaya : {{ user.wilaya }}</p>
+                        <p> Adresse : {{ user.adresse }}</p>
+                        <p> Contact : {{ user.contacts }}</p>
+                        <ul> Besoins
+                            {% for besoin in user.besoins %}
+                                <li> {{ besoin }} </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {% endfor %}
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,31 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+
+home:
+    path: /
+    controller: App\Controller\BaseController::home
+
+users.list:
+    path: /list
+    controller: App\Controller\BaseController::list
+
+
+admin.panel:
+    path: /admin/panel
+    controller: App\Controller\AdminController::panel
+
+admin.user.create:
+    path: /admin/user/create
+    controller: App\Controller\AdminController::createUser
+
+admin.user.remove:
+    path: /admin/user/{id}/remove
+    controller: App\Controller\AdminController::removeUser
+    methods: POST|DELETE
+
+
+admin.user.edit:
+    path: /admin/user/{id}/edit
+    controller: App\Controller\AdminController::edit

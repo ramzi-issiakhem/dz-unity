@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="{{ asset('admin_edit.css','css') }}">
+
+{% endblock %}
+{% block title %} DzUnity - Edit User {% endblock %}
+
+{% block body %}
+
+
+
+
+
+    <div class="registration-form" style="background-color: rgba(235,235,235,1)">
+
+
+
+
+
+
+            {{ form_start(form) }}
+
+        <h2>Edition d'une Association</h2>
+            {% for message in app.flashes('success') %}
+                <div class="alert alert-success">{{ message }}</div>
+            {% endfor %}
+
+            {% for message in app.flashes('error') %}
+                <div class="alert alert-danger">{{ message }}</div>
+            {% endfor %}
+
+            <div class="form-group">
+                <label for="type">{{ form_label(form.type) }}</label>
+                {{ form_widget(form.type,{'attr': {'placeholder': form_label(form.type) }}) }}
+            </div>
+
+            <div class="form-group">
+                <label for="name">{{ form_label(form.name) }}</label>
+                {{ form_widget(form.name,{'attr': {'placeholder': form_label(form.name) }}) }}
+            </div>
+            <div class="form-group">
+                    <label for="adress">{{ form_label(form.adresse) }}</label>
+                {{ form_widget(form.adresse,{'attr': {'placeholder': form_label(form.adresse) }}) }}
+            </div>
+
+            <div class="form-group">
+                <label for="contacts">{{ form_label(form.contacts) }}</label>
+                {{ form_widget(form.contacts,{'attr': {'placeholder': form_label(form.contacts) }}) }}
+            </div>
+
+            <div class="form-group">
+                <label for="wilaya">{{ form_label(form.wilaya) }}</label>
+                {{ form_widget(form.wilaya,{'attr': {'placeholder': form_label(form.wilaya) }}) }}
+            </div>
+            <div class="form-group">
+                <label for="besoins">{{ form_label(form.besoins) }}</label>
+                {{ form_widget(form.besoins,{'attr': {'placeholder': form_label(form.besoins) }}) }}
+            </div>
+
+            <div class="form-group">
+                <label for="state">{{ form_label(form.state) }}</label>
+                {{ form_widget(form.state,{'attr': {'placeholder': form_label(form.state) }}) }}
+            </div>
+
+
+
+
+        <div class="social-media" style="margin-top: 2rem">
+            <button class="btn btn-xl w-75 btn-primary">Editer</button>
+        </div>
+
+        {{ form_end(form) }}
+    </div>
+
+
+{% endblock %}
